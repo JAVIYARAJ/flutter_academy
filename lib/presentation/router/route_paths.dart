@@ -10,4 +10,6 @@ class RoutePaths {
   static const quiz = '/quiz';
   static const activeQuiz = '/quiz/active';
   static const conceptDetail = '/learn/detail';
+  static const login = '/auth/login';
+  static const register = '/auth/register';
 }

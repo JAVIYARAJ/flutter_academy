@@ -14,6 +14,8 @@ import '../screens/onboarding/welcome_screen.dart';
 import '../screens/onboarding/interests_screen.dart';
 import '../screens/onboarding/assessment_intro_screen.dart';
 import '../screens/onboarding/onboarding_complete_screen.dart';
+import '../screens/auth/login_screen.dart';
+import '../screens/auth/register_screen.dart';
 import 'route_names.dart';
 import 'route_paths.dart';
 
@@ -29,7 +31,7 @@ class AppRouter {
 
   static final GoRouter router = GoRouter(
     navigatorKey: _rootNavigatorKey,
-    initialLocation: RoutePaths.welcome,
+    initialLocation: RoutePaths.login,
     routes: <RouteBase>[
       GoRoute(
         path: RoutePaths.welcome,
@@ -46,6 +48,16 @@ class AppRouter {
       GoRoute(
         path: RoutePaths.onboardingComplete,
         builder: (context, state) => const OnboardingCompleteScreen(),
+      ),
+      GoRoute(
+        path: RoutePaths.login,
+        name: RouteNames.login,
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: RoutePaths.register,
+        name: RouteNames.register,
+        builder: (context, state) => const RegisterScreen(),
       ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) {

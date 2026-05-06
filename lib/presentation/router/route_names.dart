@@ -6,4 +6,6 @@ class RouteNames {
   static const quiz = 'quiz';
   static const activeQuiz = 'activeQuiz';
   static const conceptDetail = 'conceptDetail';
+  static const login = 'login';
+  static const register = 'register';
 }

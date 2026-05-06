@@ -61,7 +61,7 @@ class WelcomeScreen extends StatelessWidget {
           TextButton(
             onPressed: () => context.go(RoutePaths.home),
             child: Text(
-              'Skip',
+              'Skip Onboarding',
               style: GoogleFonts.inter(
                 color: AppColors.outline,
                 fontWeight: FontWeight.w500,
@@ -202,34 +202,6 @@ class WelcomeScreen extends StatelessWidget {
                 const Icon(Icons.arrow_forward_rounded, size: 20),
               ],
             ),
-          ),
-        ),
-        const SizedBox(height: 24),
-        Row(
-          children: [
-            const Expanded(child: Divider()),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(
-                'Already a member?',
-                style: GoogleFonts.inter(fontSize: 14, color: AppColors.onSurfaceVariant),
-              ),
-            ),
-            const Expanded(child: Divider()),
-          ],
-        ),
-        const SizedBox(height: 24),
-        SizedBox(
-          width: double.infinity,
-          child: OutlinedButton(
-            onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              foregroundColor: AppColors.primary,
-              side: const BorderSide(color: AppColors.primary, width: 1.5),
-              padding: const EdgeInsets.symmetric(vertical: 20),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            ),
-            child: const Text('Sign In', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
         ),
       ],
